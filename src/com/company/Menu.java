@@ -22,20 +22,12 @@ public class Menu {
                 addItems.addTodoItems();
                 break;
             case 2:
-                try {
-                    RemoveItems removeItems = new RemoveItems();
-                    removeItems.listSavedItemsToArray();
-                } catch (IOException ioe) {
-                    System.out.println("No Items to remove");
-                }
+                RemoveItems removeItems = new RemoveItems();
+                removeItems.showUserItemsInArray();
                 break;
             case 3:
                 ListItems listItems = new ListItems();
-                try {
-                    listItems.listSavedItemsToArray();
-                } catch (IOException ioe) {
-                    System.out.println("No Items to remove");
-                }
+                listItems.showTodoItems();
                 break;
             case 4:
                 System.out.println("Thank you for using the Todo List!");

@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static com.company.TxtToArray.toDoItems;
+
 /**
  * Created by crystaladkins on 7/17/17.
  */
@@ -17,8 +19,8 @@ public class AddItems {
 //    //By Using array we have to say how many items will be in it before we even use it.
 //    Array[] toDoItems = new Array[10];
 
-    //ArrayList works like an array only you can add and remove items without having to declare its size before hand.
-    private List<String> toDoItems = new ArrayList<>();
+//    //ArrayList works like an array only you can add and remove items without having to declare its size before hand.
+//    private List<String> toDoItems = new ArrayList<>();
     private Scanner input = new Scanner(System.in);
 
     protected void addTodoItems() {
