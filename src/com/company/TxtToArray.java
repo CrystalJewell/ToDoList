@@ -8,9 +8,9 @@ import java.util.Scanner;
 
 public class TxtToArray {
 
-    private List<String> toDoItems = new ArrayList<>();
+    public static List<String> toDoItems = new ArrayList<>();
 
-    protected void listSavedItemsToArray() throws IOException {
+    protected void addSavedItemsToArray() throws IOException {
         Scanner itemsList = new Scanner(new FileReader("ToDoList.txt"));
         while (itemsList.hasNextLine()) {
             toDoItems.add(itemsList.nextLine());
