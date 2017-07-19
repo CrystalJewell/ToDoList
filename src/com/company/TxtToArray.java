@@ -16,5 +16,7 @@ public class TxtToArray {
             toDoItems.add(itemsList.nextLine());
         }
 
+        Menu menu = new Menu();
+        menu.mainMenu();
     }
 }
