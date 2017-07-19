@@ -36,7 +36,7 @@ public class RemoveItems {
 
     protected void showUserItemsInArray() {
 
-        for (int i =0; i < toDoItems.size(); i++) {
+        for (int i = 0; i < toDoItems.size(); i++) {
 
             System.out.println(i + " " + toDoItems.get(i));
 
@@ -46,14 +46,15 @@ public class RemoveItems {
         try {
             int selectedItemNumber = input.nextInt();
             toDoItems.remove(selectedItemNumber);
+            //to clear the nextInt().
+            input.nextLine();
             removeMore();
         } catch (Exception ime) {
             int numberOfItems = toDoItems.size() - 1;
             System.out.println("Please select a number from 0 - " + numberOfItems);
             showUserItemsInArray();
         }
-        //to clear the nextInt().
-        input.nextLine();
+
     }
 
     private void removeMore() {
@@ -68,16 +69,13 @@ public class RemoveItems {
                 break;
             case "N":
             case "n":
-                try {
-                    Files.write(Paths.get("ToDoList.txt"), toDoItems);
-                } catch (IOException ioe) {
-                    System.out.println("Unable to write to file");
-                }
                 Menu menu = new Menu();
                 menu.mainMenu();
+                break;
             default:
-                    System.out.println("Please enter Y or N");
-                    removeMore();
+                System.out.println("Please enter Y or N");
+                removeMore();
+                break;
         }
 
     }

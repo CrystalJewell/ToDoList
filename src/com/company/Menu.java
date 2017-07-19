@@ -31,7 +31,8 @@ public class Menu {
                 break;
             case 4:
                 System.out.println("Thank you for using the Todo List!");
-                System.exit(1);
+                ArrayToTxt arrayToTxt = new ArrayToTxt();
+                arrayToTxt.createTxtFile();
                 break;
             default:
                 System.out.println("Please enter a number from 1 - 4");

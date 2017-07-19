@@ -19,7 +19,7 @@ public class AddItems {
 //    //By Using array we have to say how many items will be in it before we even use it.
 //    Array[] toDoItems = new Array[10];
 
-//    //ArrayList works like an array only you can add and remove items without having to declare its size before hand.
+    //    //ArrayList works like an array only you can add and remove items without having to declare its size before hand.
 //    private List<String> toDoItems = new ArrayList<>();
     private Scanner input = new Scanner(System.in);
 
@@ -35,18 +35,11 @@ public class AddItems {
         System.out.println("Would you like to add more items to your list?");
         String addMore = input.nextLine();
 
-        if(addMore.toUpperCase().equals("Y")){
+        if (addMore.toUpperCase().equals("Y")) {
             addTodoItems();
         } else if (addMore.toUpperCase().equals("N")) {
-
-                try {
-                    Files.write(Paths.get("ToDoList.txt"), toDoItems, StandardOpenOption.APPEND);
-                } catch (IOException ioe) {
-                    System.out.println("Unable to write to file");
-                }
-                Menu menu = new Menu();
-                menu.mainMenu();
-
+            Menu menu = new Menu();
+            menu.mainMenu();
         }
     }
 }
