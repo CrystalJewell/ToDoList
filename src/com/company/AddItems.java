@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class AddItems {
 
 
-    private void addTodoItems() {
+    protected void addTodoItems() {
         //Prompt user for input
         System.out.println("What would you like to add to your Todo list?");
         //Create scanner to accept input
