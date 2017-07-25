@@ -17,7 +17,9 @@ public class AddItems {
         //Create variable to hold user input
         String todoItem = input.nextLine();
 
+        //Paths.get can produce an IOException so we have to wrap it in a try catch
         try {
+            //Takes the user input and writes it to a file we named ToDoList.txt
             Files.write(Paths.get("ToDoList.txt"), todoItem.getBytes(), StandardOpenOption.APPEND);
         } catch (IOException ioe) {
             System.out.println("Unable to write to file");
