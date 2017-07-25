@@ -3,6 +3,7 @@ package com.company;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.Scanner;
 
 public class AddItems {
@@ -17,7 +18,7 @@ public class AddItems {
         String todoItem = input.nextLine();
 
         try {
-            Files.write(Paths.get("ToDoList.txt"), todoItem.getBytes());
+            Files.write(Paths.get("ToDoList.txt"), todoItem.getBytes(), StandardOpenOption.APPEND);
         } catch (IOException ioe) {
             System.out.println("Unable to write to file");
         }
